@@ -28,9 +28,9 @@ namespace MoneyCoinAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+
             services.AddControllers();
-            
+
 
             services.AddDbContext<CarteiraContext>(options =>
            options.UseMySQL(Configuration.GetConnectionString("MoneyCoin"))
@@ -60,11 +60,10 @@ namespace MoneyCoinAPI
 
             app.UseEndpoints(endpoints =>
             {
-                // endpoints.MapAreaControllerRoute(
-                // name: "AreaCarteira",
-                // areaName: "Carteira",
-                // pattern: "Carteira/{controller=Carteira}/{action=Index}/{id?}");
-
+                endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
                 endpoints.MapControllers();
             });
         }

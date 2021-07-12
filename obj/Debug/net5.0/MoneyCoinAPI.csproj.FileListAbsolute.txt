@@ -141,3 +141,4 @@ D:\Jacir\src\Apps\MoneyCoinAPI\bin\Debug\net5.0\MySql.Data.dll
 D:\Jacir\src\Apps\MoneyCoinAPI\bin\Debug\net5.0\Ubiety.Dns.Core.dll
 D:\Jacir\src\Apps\MoneyCoinAPI\bin\Debug\net5.0\Zstandard.Net.dll
 D:\Jacir\src\Apps\MoneyCoinAPI\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
+D:\Jacir\src\Apps\MoneyCoinAPI\obj\Debug\net5.0\MoneyCoinAPI.csproj.AssemblyReference.cache

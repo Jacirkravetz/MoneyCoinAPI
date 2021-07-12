@@ -30,12 +30,9 @@ namespace MoneyCoinAPI
         {
 
             services.AddControllers();
-
-
             services.AddDbContext<CarteiraContext>(options =>
-           options.UseMySQL(Configuration.GetConnectionString("MoneyCoin"))
-
-           );
+                options.UseMySQL(Configuration.GetConnectionString("MoneyCoin"))
+            );
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MoneyCoinAPI", Version = "v1" });
@@ -48,9 +45,9 @@ namespace MoneyCoinAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MoneyCoinAPI v1"));
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MoneyCoinAPI v1"));
 
             app.UseHttpsRedirection();
 
